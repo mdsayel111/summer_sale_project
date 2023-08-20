@@ -1,0 +1,27 @@
+*{
+    font-family: 'Work Sans', sans-serif;
+}
+
+.btn{
+    background-color: #E527B2;
+    min-height: fit-content;
+    height: auto;
+}
+
+.card{
+    height: 300px;
+}
+
+.card:hover {
+    cursor: pointer;
+    border: 1px solid #E527B2;
+    box-sizing: border-box;
+}
+
+input::placeholder{
+    color: "#11111180"
+}
+
+input:focus{
+    outline-width: 0;
+}
