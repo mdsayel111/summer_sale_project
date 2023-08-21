@@ -38,14 +38,10 @@ function addToCart(element){
   if(parseFloat(totalPrice.innerText) > 0){
     makePurchasebtn.disabled = false
   }
-}
-
-// enable apply button
-cupponInput.addEventListener("input", function(){
   if(parseFloat(totalPrice.innerText) >= 200 && cupponInput.value === "SELL200"){
     applyBtn.disabled = false
   }
-})
+}
 
 // calculate discount and total
 applyBtn.addEventListener("click", function(){
