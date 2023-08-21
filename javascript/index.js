@@ -38,16 +38,18 @@ function addToCart(element){
   if(parseFloat(totalPrice.innerText) > 0){
     makePurchasebtn.disabled = false
   }
-  if(parseFloat(totalPrice.innerText) >= 200 && cupponInput.value === "SELL200"){
+  if(parseFloat(totalPrice.innerText) >= 200){
     applyBtn.disabled = false
   }
 }
 
 // calculate discount and total
 applyBtn.addEventListener("click", function(){
-  const discountPrice = (parseFloat(totalPrice.innerText) * 20) / 100
-  discountElement.innerText = discountPrice.toFixed(2)
-  total.innerText = (parseFloat(totalPrice.innerText) - parseFloat(discountPrice)).toFixed(2)
+  if(cupponInput.value === "SELL200"){
+    const discountPrice = (parseFloat(totalPrice.innerText) * 20) / 100
+    discountElement.innerText = discountPrice.toFixed(2)
+    total.innerText = (parseFloat(totalPrice.innerText) - parseFloat(discountPrice)).toFixed(2)
+  }
 })
 
 // clear all price and cart item
